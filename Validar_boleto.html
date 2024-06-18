@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Boleto</title>
+    <link rel="stylesheet" href="Validar_boleto.css">
+</head>
+<body>
+    <header>
+        <h1>Validación de Boleto</h1>
+    </header>
+    <main>
+        <section>
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="ticketCode">Código del Boleto:</label>
+                    <input type="text" id="ticketCode" name="ticketCode" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardDigits">Últimos 4 dígitos de la tarjeta:</label>
+                    <input type="text" id="cardDigits" name="cardDigits" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Nombre del Titular:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Fecha:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Hora:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Lugar:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Tipo de Concierto:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <div class="form-group">
+                    <label for="ticketHolder">Codigo de Fan ID:</label>
+                    <input type="text" id="ticketHolder" name="ticketHolder" required>
+                </div>
+                <button type="submit">Validar Boleto</button>
+            </form>
+            <div id="validationResult">Boleto Valido</div>
+        </section>
+    </main>
+</body>
+</html>

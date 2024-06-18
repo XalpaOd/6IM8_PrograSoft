@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boleto de Evento</title>
+    <link rel="stylesheet" href="Boleto2.css">
+</head>
+<body>
+    <div class="ticket">
+        <div class="ticket-header">
+            <h2>Evento: <span id="evento-titulo">Concierto de Rock</span></h2>
+        </div>
+        <div class="ticket-body">
+            <div class="ticket-details">
+                <p><strong>Fecha:</strong> <span id="evento-fecha">30 de Junio, 2024</span></p>
+                <p><strong>Hora:</strong> <span id="evento-hora">8:00 PM</span></p>
+                <p><strong>Lugar:</strong> <span id="evento-lugar">Estadio Nacional</span></p>
+                <p><strong>Tipo de Concierto:</strong> <span id="evento-tipo">Rock</span></p>
+                <p><strong>Solicitante:</strong> Juan Pérez</p>
+                <p><strong>Fan ID:</strong> <span id="fan-id">123456789</span></p>
+            </div>
+            <div class="ticket-qrcode">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+        <div class="ticket-footer">
+            <p>¡Gracias por tu participación!</p>
+        </div>
+    </div>
+    <div class="event-selector">
+        <label for="eventos">Selecciona un evento:</label>
+        <select id="eventos" onchange="actualizarBoleto()">
+            <option value="rock">Concierto de Rock</option>
+            <option value="jazz">Concierto de Jazz</option>
+            <option value="pop">Concierto de Pop</option>
+        </select>
+    </div>
+    <button class="login-button">
+        <a class="login-button" href="Validar_boleto.html">Validar mis boletos</a> 
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="Boleto2.js"></script>
+</body>
+</html>

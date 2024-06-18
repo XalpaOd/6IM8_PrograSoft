@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>HTML Form</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #d1b38e; /* Fondo color arena */
+                font-family: 'Arial', sans-serif; /* Tipo de letra */
+            }
+
+            form {
+                width: 800px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border: 1px solid #000; /* Borde negro */
+            }
+
+            fieldset {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0;
+            }
+
+            legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                color: #333; /* Color del texto */
+                font-size: 24px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: #000; /* Color del texto */
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea,
+            input[type="date"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="radio"] {
+                margin-left: 20px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+                background-color: #000; /* Fondo negro */
+                color: #fff; /* Texto blanco */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                text-decoration: none; /* Sin subrayado */
+            }
+
+            a {
+                color: #000; /* Color del enlace */
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline; /* Subrayado al pasar el mouse */
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Validación FanID
+                </legend>
+                <h1>Confirme sus datos personales</h1>
+        
+                <label>Ingrese su código de boleto</label>
+                <input type="text" name="boleto" /><br><br>
+                
+                <label>Ingrese los 4 dígitos de la tarjeta de pago</label>
+                <input type="text" name="tarjeta" /><br><br>
+                
+                <label>Ingrese el nombre de titular</label>
+                <input type="text" name="titular" /><br><br>
+                   
+                <a href="QR.html">Generar</a>
+            </fieldset>
+            <button class="login-button">
+                <a class="login-button" href="Boleto2.html">Obtener mis boletos</a> 
+            </button>
+        </form>
+    </body>
+</html>

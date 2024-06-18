@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Form</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
+
+            form {
+                width: 400px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px
+                    rgba(0, 0, 0, 0.1);
+            }
+
+            fieldset {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0;
+            }
+
+            legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea,
+            input[type="date"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            input[type="radio"] {
+                margin-left: 20px;
+            }
+
+            input[type="submit"] {
+                padding: 10px 20px;
+
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Creación FanID
+                </legend>
+        
+                <label
+                    >Ingrese su nombre completo</label
+                >
+                <input type="text" name="name" /><br><br>
+                <label>Ingrese su correo electrónico</label>
+                <input type="text" correo="name" />
+                <br><br>
+                <label>Ingrese su género</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                />Masculino
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                />Femenino
+                <input
+                    type="radio"
+                    name="gender"
+                    value="others"
+                />Otro
+                <br><br>
+                <label
+                    >Ingrese su edad</label
+                >
+                <input type="date" name="dob" />
+                <br><br>
+                <label>Ingrese los último 4 dígitos
+                    de la tarjeta de crédito con que se realizo el pago:</label>
+                <textarea
+                    name="address"
+                ></textarea><br><br>
+                <input
+                    type="submit"
+                    value="Mandar"
+                />
+            </fieldset>
+        </form>
+    </body>
+</html>

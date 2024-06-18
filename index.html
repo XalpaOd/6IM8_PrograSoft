@@ -1,0 +1,361 @@
+<!DOCTYPE html>  <!--Ventura-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="sorteo.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+        body {
+            background-color: #e2cbb0;
+            font-family: "Salsa", sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .welcome-title {
+            margin-top: 30px 0 40px;
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0 40px; /* Added margin to create space before slider */
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto 20px; /* Adjusted margin to create space before the slider */
+            overflow: hidden;
+            background-color: white; /*fondo slider*/
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .slider-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            will-change: transform;
+        }
+
+        .card {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .card h3, .card p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .read-more {
+            background-color: #A77C53;
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .read-more:hover {
+            background-color: #8E5E3C;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white; /*Color flechas next*/
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .slider-button.prev {
+            left: 10px;
+        }
+
+        .slider-button.next {
+            right: 10px;
+        }
+
+        .todo {
+            background-color: #A77C53;/*color de contenedor de mi index*/
+            padding: 20px 0;
+        }
+
+        .container {
+            background-color: #8E5E3C; /*color de mi index*/
+            color: white; /*Color de eventos seleccionados*/
+            padding: 45px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .eventos-anteriores h3 {
+            margin-top: 0;
+        }
+
+        .eventos-anteriores ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .eventos-anteriores ul li {
+            margin: 5px 0;
+        }
+
+        .login-button {
+            padding: 10px 10px;
+            background-color: #EDEBE6;
+            color: black;
+            border: 30%;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 50px 0;
+        }
+
+        .login-button:hover {
+            background-color: #d9c2ba;
+        }
+        .login-button:hover a {
+            background-color: #d9c2ba;
+            text-decoration: none;
+        }
+        .login-button a {
+            text-decoration: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            max-width: 80%;
+            text-align: left;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <div class="header">INICIO</div>
+        <!-- <a href="asignacion.html">Asignacion</a> -->
+        <!-- <img src="boleto.png" height="50%" width="50px"> -->
+    </div>
+
+    <div class="welcome-title">
+        Bienvenido, por favor, escoge los eventos que sean de tu interés
+    </div>
+
+    <div class="slider">
+        <div class="slider-container">
+            <div class="card">
+                <img src="Ariana.png" alt="Briana Tozour">
+                <h3>Briana Tozour</h3>
+                <p>Graphic Designer</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="Angeles.png" alt="Pricilla Preez">
+                <h3>Pricilla Preez</h3>
+                <p>Web Developer</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="Weekend.jpeg" alt="Eliana Maia">
+                <h3>Eliana Maia</h3>
+                <p>App Developer</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="Ariana.png" alt="Nombre4">
+                <h3>Nombre4</h3>
+                <p>Profesión4</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="ajr.jpeg" alt="Nombre5">
+                <h3>Nombre5</h3>
+                <p>Profesión5</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="https://example.com/image6.jpg" alt="Nombre6">
+                <h3>Nombre6</h3>
+                <p>Profesión6</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="https://example.com/image7.jpg" alt="Nombre7">
+                <h3>Nombre7</h3>
+                <p>Profesión7</p>
+                <button class="read-more">Read more</button>
+            </div>
+            <div class="card">
+                <img src="https://example.com/image8.jpg" alt="Nombre8">
+                <h3>Nombre8</h3>
+                <p>Profesión8</p>
+                <button class="read-more">Read more</button>
+            </div>
+        </div>
+        <button class="slider-button prev">&lt;</button>
+        <button class="slider-button next">&gt;</button>
+    </div>
+
+    <div class="todo">
+        <div class="container">
+            <div class="eventos-anteriores">
+                <h3>Eventos Seleccionados Anteriormente:</h3>
+                <ul>
+                    <li>Concierto A</li>
+                    <li>Concierto B</li>
+                    <li>Concierto A</li>
+                    <li>Concierto B</li>
+                    <li>Concierto A</li>
+                    <li>Concierto B</li>
+                </ul>
+            </div>
+
+            <button id="open-modal" class="login-button">Seleccionar mis Eventos</button><br><br>
+            <button class="login-button">
+            <a class="login-button" href="asignacion.html">Guardar mis Eventos</a> 
+        </button>
+            <!-- <button class="login-button" href="Asignación.html">Guardar mis Eventos</button> -->
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Iniciar Sesión y Seleccionar Eventos</h2>
+
+                <form id="login-event-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required><br>
+
+                    <label for="evento">Seleccionar Evento:</label>
+                    <select id="evento" name="evento" required>
+                        <option value="">Seleccione un evento</option>
+                        <option value="Concierto A">Concierto A</option>
+                        <option value="Concierto B">Concierto B</option>
+                        <option value="Concierto C">Concierto C</option>
+                    </select><br>
+
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modal');
+        var openModalButton = document.getElementById('open-modal');
+        var closeButton = document.getElementsByClassName('close')[0];
+
+        openModalButton.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        closeButton.onclick = function() {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        var currentIndex = 0;
+        var sliderContainer = document.querySelector('.slider-container');
+        var cards = document.querySelectorAll('.card');
+        var cardCount = cards.length;
+        var visibleCards = 3;
+        var totalWidth = 100 * cardCount / visibleCards;
+
+        document.querySelector('.slider-button.prev').addEventListener('click', function() {
+            currentIndex = (currentIndex > 0) ? currentIndex - visibleCards : cardCount - visibleCards;
+            sliderContainer.style.transform = 'translateX(' + (-100 * currentIndex / cardCount) + '%)';
+        });
+
+        document.querySelector('.slider-button.next').addEventListener('click', function() {
+            currentIndex = (currentIndex < cardCount - visibleCards) ? currentIndex + visibleCards : 0;
+            sliderContainer.style.transform = 'translateX(' + (-100 * currentIndex / cardCount) + '%)';
+        });
+    </script>
+</body>
+</html>
+
+

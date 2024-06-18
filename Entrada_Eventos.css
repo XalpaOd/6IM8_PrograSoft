@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #A77C53; /* Fondo #A77C53 */
+}
+
+.ticket {
+    width: 700px;
+    height: 250px;
+    border: 2px dashed #333;
+    border-radius: 15px;
+    background-color: #fff; /* Color del ticket blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ticket:before, .ticket:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #fff; /* Color del ticket blanco */
+    border: 2px dashed #333;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ticket:before {
+    left: -11px;
+}
+
+.ticket:after {
+    right: -11px;
+}
+
+.ticket-header, .ticket-footer {
+    background-color: #DCC895; /* Color del encabezado #DCC895 */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.ticket-body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: left;
+    align-items: center;
+}
+
+.ticket-details {
+    flex: 1;
+}
+
+.ticket-details p {
+    margin: 5px 0;
+}
+
+.ticket-qrcode {
+    margin-left: 20px;
+}
+
+#qrcode {
+    width: 128px;
+    height: 128px;
+}
+
+.event-selector {
+    margin-top: 20px;
+}
+
+.event-selector label {
+    margin-right: 10px;
+}
+
+.event-selector select {
+    padding: 5px;
+    font-size: 16px;
+}

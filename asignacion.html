@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!--Mariana-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Asignado</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #A77C53;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <div class="header">INICIO</div>
+        <a href="sorteo.html">Ir a sorteo</a>
+    
+    </div>
+    <div class="container" id="container">
+        <div class="title">Evento Asignado</div>
+        <div class="subtitle">¿Desea Consultar el evento asignado?</div>
+        <button class="button" onclick="mostrarDetalles()">Mostrar</button><br><br>
+        <a class="button" href="sorteo.html">Sortear mis eventos</a> 
+    </div>
+    <div class="content" id="content">
+        <div class="poster" id="poster">
+            <img src="ajr.jpeg" alt="Event Poster">
+        </div>
+        <div class="detalles" id="detalles">
+            <form>
+                <label for="evento">Evento:</label>
+                <input type="text" id="evento" name="evento"><br><br>
+                <label for="fecha">Fecha:</label>
+                <input type="text" id="fecha" name="fecha"><br><br>
+                <label for="hora">Hora:</label>
+                <input type="text" id="hora" name="hora"><br><br>
+                <label for="lugar">Lugar:</label>
+                <input type="text" id="lugar" name="lugar">
+                <button type="button" onclick="ocultarDetalles()">OCULTAR</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
